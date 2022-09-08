@@ -395,18 +395,38 @@
 
 
 
-Console.WriteLine("Enter a number: ");
-double num1 = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter a number: ");
+//double num1 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Enter a number: ");
-double num2 = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter a number: ");
+//double num2 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine(FinalAnswer(num1, num2));
-Console.ReadLine();
+//Console.WriteLine(FinalAnswer(num1, num2));
+//Console.ReadLine();
 
 
-static double FinalAnswer(double num1, double num2)
+//static double FinalAnswer(double num1, double num2)
+//{
+//    double finalAnswer = num1 * num2;
+//    return finalAnswer;
+//}
+
+
+
+
+for (int i = 2; i < 100; i++)
 {
-    double finalAnswer = num1 * num2;
-    return finalAnswer;
+    bool isPrime = true;
+    for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0)
+        {
+            isPrime = false;
+        }
+    }
+    if (isPrime)
+    {
+        Console.WriteLine(i);
+    }
 }
+Console.ReadLine();
