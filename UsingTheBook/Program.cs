@@ -72,7 +72,7 @@
 //        divisor++;
 //    }
 //}
-//if (divisor ==2)
+//if (divisor == 2)
 //{
 //    Console.WriteLine(a + " is prime");
 //}
@@ -368,26 +368,24 @@
 
 
 
+for (int i = 2; i < 100; i++)
+{
+    bool isPrime = true;
+    for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime)
+    {
+        Console.WriteLine(i);
+    }
+}
 
-//for (int i = 2; i < 100; i++)
-//{
-//    bool isPrime = true;
-//    for (int j = 2; j < i; j++)
-//    {
-//        if (i % j == 0)
-//        {
-//            isPrime = false;
-//            break;
-//        }
-//    }
-//    if (isPrime)
-//    {
-//        Console.WriteLine(i);
-//    }
-//}
-
-
-
+Console.ReadLine();
 
 
 
@@ -412,21 +410,3 @@
 //}
 
 
-
-
-for (int i = 2; i < 100; i++)
-{
-    bool isPrime = true;
-    for (int j = 2; j < i; j++)
-    {
-        if (i % j == 0)
-        {
-            isPrime = false;
-        }
-    }
-    if (isPrime)
-    {
-        Console.WriteLine(i);
-    }
-}
-Console.ReadLine();
