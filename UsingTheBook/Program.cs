@@ -368,24 +368,24 @@
 
 
 
-for (int i = 2; i < 100; i++)
-{
-    bool isPrime = true;
-    for (int j = 2; j < i; j++)
-    {
-        if (i % j == 0)
-        {
-            isPrime = false;
-            break;
-        }
-    }
-    if (isPrime)
-    {
-        Console.WriteLine(i);
-    }
-}
+//for (int i = 2; i < 100; i++)
+//{
+//    bool isPrime = true;
+//    for (int j = 2; j < i; j++)
+//    {
+//        if (i % j == 0)
+//        {
+//            isPrime = false;
+//            break;
+//        }
+//    }
+//    if (isPrime)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}
 
-Console.ReadLine();
+//Console.ReadLine();
 
 
 
@@ -408,5 +408,34 @@ Console.ReadLine();
 //    double finalAnswer = num1 * num2;
 //    return finalAnswer;
 //}
+
+
+
+
+
+
+
+// method of strings.
+//concat
+//string sentence = "This is the main reason why we don't go";
+
+//string full = string.Concat(sentence, " the house.");
+
+//Console.WriteLine();
+Console.ReadLine();
+
+//int num = 45;
+
+//string formatted = string.Format("The current weight is {0} kg.", num);
+//Console.WriteLine(formatted);
+
+
+
+Decimal pricePerOunce = 17.36m;
+String s = String.Format("The current price is {0} per ounce.", pricePerOunce);
+Console.WriteLine(s);
+
+
+
 
 
