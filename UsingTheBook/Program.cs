@@ -416,26 +416,41 @@
 
 
 // method of strings.
+
+
+
+
 //concat
 //string sentence = "This is the main reason why we don't go";
 
 //string full = string.Concat(sentence, " the house.");
 
 //Console.WriteLine();
-Console.ReadLine();
-
-//int num = 45;
-
-//string formatted = string.Format("The current weight is {0} kg.", num);
-//Console.WriteLine(formatted);
+//Console.ReadLine();
 
 
 
-Decimal pricePerOunce = 17.36m;
-String s = String.Format("The current price is {0} per ounce.", pricePerOunce);
-Console.WriteLine(s);
+/* Converting string to a list of characters*/
+
+//string name = "Elijah Kofi";
+//char[] nameChar = name.ToCharArray();
+//foreach (char item in nameChar)
+//{
+//    Console.WriteLine(item);
+//}
+//Console.ReadLine();
 
 
+/*Converting a list of characters to string. */
 
+//char[] ch = new char[3];
 
+//ch[0] = 'E';
+//ch[1] = 'l';
+//ch[2] = 'i';
 
+//string name = string.Concat(ch);
+
+//Console.WriteLine(name);
+//Console.ReadLine();
+ 
