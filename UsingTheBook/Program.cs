@@ -453,4 +453,31 @@
 
 //Console.WriteLine(name);
 //Console.ReadLine();
- 
+
+
+
+/* here, we are finding all prime numbers between n and m*/
+
+
+Console.WriteLine("enter a number");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter a higher number:");
+int m = Convert.ToInt32(Console.ReadLine());
+
+
+for (int i = n; i < m; i++)
+{
+    bool prime = true;
+    for (int j = n; j < i; j++)
+    {
+        if (i % j == 0)
+        {
+            prime = false;
+        }
+    }
+    if (prime)
+    {
+        Console.WriteLine(i);
+    }
+}Console.ReadLine();
