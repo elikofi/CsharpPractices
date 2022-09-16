@@ -30,35 +30,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Write a program that checks if a given number n (1 < n < 100) is a prime number */
 
 //Console.Write("Enter a number:");
@@ -459,25 +430,53 @@
 /* here, we are finding all prime numbers between n and m*/
 
 
-Console.WriteLine("enter a number");
+//Console.WriteLine("enter a number");
+//int n = Convert.ToInt32(Console.ReadLine());
+
+//Console.WriteLine("Enter a higher number:");
+//int m = Convert.ToInt32(Console.ReadLine());
+
+
+//for (int i = n; i < m; i++)
+//{
+//    bool prime = true;
+//    for (int j = n; j < i; j++)
+//    {
+//        if (i % j == 0)
+//        {
+//            prime = false;
+//        }
+//    }
+//    if (prime)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}Console.ReadLine();
+
+
+
+
+
+
+Console.WriteLine("Enter a number to check if it is prime.");
 int n = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter a higher number:");
-int m = Convert.ToInt32(Console.ReadLine());
-
-
-for (int i = n; i < m; i++)
+int divisor = 1;
+for (int i = 2; i < 100; i++)
 {
-    bool prime = true;
-    for (int j = n; j < i; j++)
+    
+    if (n % i == 0)
     {
-        if (i % j == 0)
-        {
-            prime = false;
-        }
+        divisor++;
     }
-    if (prime)
-    {
-        Console.WriteLine(i);
-    }
-}Console.ReadLine();
+}
+
+if (divisor == 2)
+{
+    Console.WriteLine(n + "is prime.");
+}
+else
+{
+    Console.WriteLine(n + "is not prime.");
+}
+Console.Read();
