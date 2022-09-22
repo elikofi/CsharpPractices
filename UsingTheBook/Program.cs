@@ -458,25 +458,51 @@
 
 
 
-Console.WriteLine("Enter a number to check if it is prime.");
-int n = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Enter a number to check if it is prime.");
+//int n = Convert.ToInt32(Console.ReadLine());
 
-int divisor = 1;
-for (int i = 2; i < 100; i++)
+//int divisor = 1;
+//for (int i = 2; i < 100; i++)
+//{
+
+//    if (n % i == 0)
+//    {
+//        divisor++;
+//    }
+//}
+
+//if (divisor == 2)
+//{
+//    Console.WriteLine(n + "is prime.");
+//}
+//else
+//{
+//    Console.WriteLine(n + "is not prime.");
+//}
+//Console.Read();
+
+
+using System.Text;
+
+static string GetRandomPassword(int length)
 {
-    
-    if (n % i == 0)
+    const string chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    StringBuilder sb = new StringBuilder();
+    Random rnd = new Random();
+
+    for (int i = 0; i < length; i++)
     {
-        divisor++;
+        int index = rnd.Next(chars.Length);
+        sb.Append(chars[index]);
     }
+
+    return sb.ToString();
 }
 
-if (divisor == 2)
-{
-    Console.WriteLine(n + "is prime.");
-}
-else
-{
-    Console.WriteLine(n + "is not prime.");
-}
-Console.Read();
+int length = 10;
+
+string password = GetRandomPassword(length);
+Console.WriteLine(password);
+
+Console.ReadLine();
