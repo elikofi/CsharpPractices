@@ -482,27 +482,46 @@
 //Console.Read();
 
 
-using System.Text;
+//using System.Text;
 
-static string GetRandomPassword(int length)
-{
-    const string chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//static string GetRandomPassword(int length)
+//{
+//    const string chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    StringBuilder sb = new StringBuilder();
-    Random rnd = new Random();
+//    StringBuilder sb = new StringBuilder();
+//    Random rnd = new Random();
 
-    for (int i = 0; i < length; i++)
-    {
-        int index = rnd.Next(chars.Length);
-        sb.Append(chars[index]);
-    }
+//    for (int i = 0; i < length; i++)
+//    {
+//        int index = rnd.Next(chars.Length);
+//        sb.Append(chars[index]);
+//    }
 
-    return sb.ToString();
-}
+//    return sb.ToString();
+//}
 
-int length = 10;
+//int length = 10;
 
-string password = GetRandomPassword(length);
-Console.WriteLine(password);
+//string password = GetRandomPassword(length);
+//Console.WriteLine(password);
 
+//Console.ReadLine();
+
+/* Reversed array */
+
+int[] A = { 20, 30, 40, 50, 60, 70, 80 };
+
+var b = reverseArray(A.ToList());
 Console.ReadLine();
+
+static List<int> reverseArray(List<int> a)
+{
+    for (int i = 0; i < a.Count / 2; i++)
+    {
+        int swap = a[i];
+
+        a[i] = a[a.Count - 1 -i];
+        a[a.Count - 1 -i] = swap;
+    }
+    return a;
+}
