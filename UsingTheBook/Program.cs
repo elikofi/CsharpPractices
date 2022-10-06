@@ -509,19 +509,38 @@
 
 /* Reversed array */
 
-int[] A = { 20, 30, 40, 50, 60, 70, 80 };
+//int[] A = { 20, 30, 40, 50, 60, 70, 80 };
 
-var b = reverseArray(A.ToList());
-Console.ReadLine();
+//var b = reverseArray(A.ToList());
+//Console.ReadLine();
 
-static List<int> reverseArray(List<int> a)
+//static List<int> reverseArray(List<int> a)
+//{
+//    for (int i = 0; i < a.Count / 2; i++)
+//    {
+//        int swap = a[i];
+
+//        a[i] = a[a.Count - 1 - i];
+//        a[a.Count - 1 - i] = swap;
+//    }
+//    return a;
+//}
+
+
+Console.WriteLine("Enter the name of your alien:");
+string alienName = Console.ReadLine();
+
+
+MeetAlien();
+
+
+void MeetAlien()
 {
-    for (int i = 0; i < a.Count / 2; i++)
-    {
-        int swap = a[i];
+    Random numberGenerator = new Random();
 
-        a[i] = a[a.Count - 1 -i];
-        a[a.Count - 1 -i] = swap;
-    }
-    return a;
+    string name = alienName + "-" + numberGenerator.Next(50, 57508);
+    int age = numberGenerator.Next(30, 2000);
+
+    Console.WriteLine($"The name of the alien is {name} and his age is {age}");
 }
+Console.ReadLine();
